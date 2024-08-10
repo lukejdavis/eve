@@ -1,17 +1,21 @@
 body {
-  background-color: 050010;
+  background-image: url("./img/spaceships_in_deep_space.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+  overflow: hidden;
+  color:#ffAf40;
 }
 aside {
-  color: #fff;
   width: 150px;
   padding-left: 20px;
   height: 70vh;
-  background-image: url("./img/space_battle_side.png");
+  background-color: transparent;
 }
 
 aside a {
   font-size: 12px;
-  color: #fff;
+  color: #ffAf40;
   display: block;
   padding: 4px;
   padding-left: 30px;
@@ -24,7 +28,6 @@ aside a:hover {
   background: #fff;
   outline: none;
   position: relative;
-  background-color: #fff;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -78,7 +81,6 @@ width:90%;
 height:100vh;
 text-align:left;
 vertical-align: middle;	
-background-color:#ffffff;
 border:1px solid #cccccc;
 }
 
@@ -88,8 +90,8 @@ border:1px solid #cccccc;
 margin:0;
 padding:0;
 height:15vh;
-background-image: url("./img/space_battle.png");
 text-align:center;
+background: transparent;
 }
 
 #header h1 {
@@ -97,7 +99,6 @@ margin:0;
 padding:20px 0 0 20px;
 font-size:2.8em;
 letter-spacing:.1em;
-color:#ffAf40;
 font-weight:1400;
 }
 
@@ -115,9 +116,10 @@ font-weight:1400;
 float:left;
 margin:0;
 padding:0;
-width:160px;
+width:170px;
 height:70vh;
 font-size:.9em;
+border: 1px solid white;
 }
 
 #leftColumn p {
@@ -149,9 +151,9 @@ text-decoration:none;
 }
 
 #centerColumn { 	
-margin:0 0 0 170px;
+margin:0 0 0 171px;
 padding:0;
-background-color:#ffffff;
+border: 1px solid white;
 }
 
 #centerColumn p {
@@ -175,7 +177,6 @@ height:15vh;
 line-height:15vh;
 text-align:center;
 font-size:.6em;
-background-color:#ffffff;
 border-top:1px solid #cccccc;
 }
 
