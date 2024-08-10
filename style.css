@@ -1,9 +1,12 @@
+body {
+  background-color: 050010;
+}
 aside {
   color: #fff;
   width: 150px;
   padding-left: 20px;
   height: 70vh;
-  background-image: linear-gradient(-45deg , #44a7fd, #0048bd);
+  background-image: url("./img/space_battle_side.png");
 }
 
 aside a {
@@ -33,6 +36,7 @@ aside a i {
 aside p {
   margin: 0;
   padding: 40px 0;
+  font-size:1.8em;
 }
 
 body {
@@ -84,25 +88,27 @@ border:1px solid #cccccc;
 margin:0;
 padding:0;
 height:15vh;
-background-image: linear-gradient(45deg , #0048bd, #44a7fd);
+background-image: url("./img/space_battle.png");
+text-align:center;
 }
 
 #header h1 {
 margin:0;
 padding:20px 0 0 20px;
-font-size:1.8em;
+font-size:2.8em;
 letter-spacing:.1em;
-color:#ffffff;
-font-weight:lighter;
+color:#ffAf40;
+font-weight:1400;
 }
 
 #header h2 {
 margin:0;
 padding:0 0 0 20px;
-font-size:.9em;
+font-size:2.0em;
 font-weight:lighter;
 letter-spacing:.1em;
-color:#eeeeee;
+color:#ffAf40;
+font-weight:1400;
 }
 
 #leftColumn {
