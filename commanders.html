@@ -10,92 +10,126 @@
   <div class="tab">
     <button class="tablinks" onclick="openTab(event, 'Basics')">Basics</button>
     <button class="tablinks" onclick="openTab(event, 'Promote')">Promote</button>
-    <button class="tablinks" onclick="openTab(event, 'Traits')">Traits</button>
+    <button class="tablinks" onclick="openTab(event, 'Talents')">Talents</button>
   </div>
 
   <!-- Tab content -->
   <div id="Basics" class="tabcontent">
     <h3>Basics</h3>
     <img src="./img/commanders/commander1.jpg" class="game_image" />
-    <p>1. The top left section details basic summary information on the ship.  The top row is the name of the faction and name of the ship. Faction is important when choosing
-      commanders later on in <a href="javascript:void(0);" onclick="changeContentParent('./content_template.html')">Fleet</a> construction. The second row shows the formations
-      which this ship will give bonus's too and ship size. Ship size changes number of ships per squad (Frigate=5, Destroyer=4, Cruiser=3, Battle Cruiser=2, Battleship=1). 
-      The third line shows ship firepower which impacts the fleet power. This is a summation of HP/Firepower/Traits. As one increases this value increases. Lastly the icons 
-      here can be clicked and indicate what use the ship can be used for. Options include uses such as Offence, Support, Drones and ECM. Since Eve GC doesn't yet have 
-      multi-fleet attack options hopefully this will have greater usefullness in future updates.
+    <p>1. The top left section details basic summary information on the commander. The top row is the name of the
+      faction and name of the commander. Faction is important when constructing a <a href="javascript:void(0);"
+        onclick="changeContentParent('./content_template.html')">Fleet</a>. The second row shows the
+      formations which this commander will give bonus's too.
+      Lastly the icons here can be clicked and indicate what use the commander can be used for. Options include uses
+      such as Offence, Support,
+      Drones and repair.
     </p>
 
-    <p>2. This shows the current rak of the ship. This can be increased using the <a href="javascript:void(0);" onclick="openTab(event, 'Invent')">Invent button</a>
+    <p>
+      <img src="./img/commanders/commander3.jpg" style="width:200px;height:70px;float:right;margin:0px 20px 0px 5px;" />
+      2. This shows the current rank of the commander. This can be increased using the <a href="javascript:void(0);"
+        onclick="openTab(event, 'Promote')">Promote button</a>. <br><br>It also shows the Command Matrix active icon
+      which
+      indicates the Command Matrix is unlocked (3 Star rank). This gives an extra 300 squads to the fleet and +20
+      stamina. <br><br>
     </p>
 
-    <p>3. Here you can find the basic attributes of the ships. Of note, make sure when comparing to compare to equivilent ship size. I.e don't compare a firgate HP to a Cruisers HP.
-      <table>
-        <tr>
-          <th>Attribute</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>Ships per squad</td>
-          <td>Determines the number of ships in each squad</td>
-        </tr>
-        <tr>
-          <td>HP</td>
-          <td>Determines the amount of damge that a ship can withstand</td>
-        </tr>
-        <tr>
-          <td>Firepower</td>
-          <td>Determines the amount of damge that a ship causes</td>
-        </tr>
-        <tr>
-          <td>Bandwidth (Aka Data Rate)</td>
-          <td>Determines the order a ship will fire, the higher the better. See <a href="javascript:void(0);" onclick="changeContentParent('./content_template.html')">Fleets</a><br>
-            <span style="color:greenyellow"><b>Note:</b> At present Data Rate is supreme. If you fire first you kill first which means the enemy has less ships to fire back at you.
-              This also includes getting off effects such as ECM Jam (Prevents other player from firing) or Force Shield (reduces incomming damage). The author highly recomends keeping
-              this in mind when choosing ships. The big issue with ships like the Omen and Oracle is they are the last to fire and their weapon takes two turns to fire. This means
-              you can have half your fleet destroyed before even firing a shot.
-            </span>
-          </td>
-        </tr>
-        <tr>
-          <td>Energy</td>
-          <td>Not Known</td>
-        </tr>
-        <tr>
-          <td>Armor</td>
-          <td>Is esntially the resistance of the ship to dmage. I have not yet confirmed this but I believe each point of armor is 1% resistance. So an armor of 10 will reduce 
-            incomming damage by 10%</td>
-        </tr>
-      </table>
+    <p>3. Here you can find the basic attributes of the commanders.
+    <table>
+      <tr>
+        <th>Attribute</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Squad Capacity</td>
+        <td>In a fleet the number of squads is determined by the ship depending on research (Control Tower) and the
+          commanders. If your
+          reseach on control tower is 10/10 (10,000 squads) Then adding a level 1 commander will give 10,100 squads. Two
+          level 1 commanders will
+          give a squad capacity of 20,200 squads. Each commander level gives an extra 100 squads for a total of 50
+          levels and 5000 squads.
+          Promotion level will also increase squad capacity. With unpromoted commanders, two max level commanders will
+          give a total squad
+          capacity of 30,000
+        </td>
+      </tr>
+      <tr>
+        <td>Data Rate</td>
+        <td>Determines the order a commander will fire, the higher the better. See <a href="javascript:void(0);"
+            onclick="changeContentParent('./content_template.html')">Fleets</a><br><br>
+          <span style="color:greenyellow"><b>Note:</b> At present Data Rate is supreme. If you fire first you kill first
+            which means the enemy has less ships to fire back at you.
+            This also includes getting off effects such as ECM Jam (Prevents other player from firing) or Force Shield
+            (reduces incomming damage). The author highly recomends keeping
+            this in mind when choosing commanders, especially those in a support role.
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>Offense</td>
+        <td>This gives a 5% bonus to damage for every 100 offence. In the above picture Cerb has an offence of 586 which
+          is roughly equivilent
+          to 29.3% damage bonus. It also applies to some talents as well which is usually in the talent
+          comments.<br><br>
+          <span style="color:greenyellow"><b>Note:</b> This value ONLY applies from the primary commander. Secondary
+            commander Offence and Tactics
+            are ignored. Generally choose the commander with the best Offence and Tactics for the role the fleet
+            requires.
+          </span>
+        </td>
+      </tr>
+      <tr>
+        <td>Tactics</td>
+        <td>This gives a 5% bonus to resistance for every 100 tactics. In the above picture Cerb has tactics of 327
+          which is roughly equivilent
+          to 16.3% resistance. It also applies to some talents as well which is usually in the talent comments.<br><br>
+          <span style="color:greenyellow"><b>Note:</b> Resistance is a damage reduction percentage. If you get hit by
+            100 damage, 20% resistance means
+            only 80 damage gets through. HP on the ship is more like health. If you get hit by 80 damage after
+            resistance then your HP drops by 80.
+          </span><br><br>
+          <span style="color:greenyellow"><b>Note:</b> This value ONLY applies from the primary commander. Secondary
+            commander Offence and Tactics
+            are ignored. Generally choose the commander with the best Offence and Tactics for the role the fleet
+            requires.
+          </span>
+        </td>
+      </tr>
+    </table>
     </p>
 
-    <p>4. Ship Traits.  These determine what type of ship module will be used. They roughly fall into four categories. Weapon, Repair, Distruptor or Support. Weapons generally go
-      boom boom but may include things like drones which act a little like a 2nd ship. Repair will repair damaged, but not destroyed, ships during battle. Disrupters are things 
-      like ECM jammers or neural shutdowns, these will cause a ship or commander to fail to use their traits and abilities. Support includes things like increased firepower, armor or quick response. 
+    <p>4. Commander Talents. These determine what type of ship module will be used. They roughly fall into four
+      categories.
+      Weapon, Repair, Distruptor or Support. Weapons generally go
+      boom boom but may include things like drones which act a little like a 2nd ship. Repair will repair damaged, but
+      not destroyed, ships during battle. Disrupters are things
+      like ECM jammers or neural shutdowns, these will cause a ship or commander to fail to use their traits and
+      abilities. Support includes things like increased firepower, armor or quick response.
       <br><br>
-      Ship traits cost both cards and isk to enable and raise their level. Isk increase up to $250,000 at level 15. For the card requirements:
-      <table>
-        <tr>
-          <th>Tier</th>
-          <th>1st Trait</th>
-          <th>2nd Trait</th>
-          <th>3rd Trait</th>
-          <th>4th Trait</th>
-        </tr>
-        <tr>
-          <td>Gold</td>
-          <td>Free</td>
-          <td>40 Purple</td>
-          <td>40 Gold</td>
-          <td>40 Gold</td>
-        </tr>
-        <tr>
-          <td>Purple</td>
-          <td>Free</td>
-          <td>40 Purple</td>
-          <td>80 Purple</td>
-          <td>N/A</td>
-        </tr>
-      </table>
+      Commander talents cost cards to enable. To raise their levels simply level the commander. You will get 1
+      talent point for each level gained. Promotion will also give extra talent points. For
+      the card requirements to enable:
+    <table>
+      <tr>
+        <th>Tier</th>
+        <th>1st Talent</th>
+        <th>2nd Talent</th>
+        <th>3rd Talent</th>
+      </tr>
+      <tr>
+        <td>Gold</td>
+        <td>Free</td>
+        <td>40 Purple</td>
+        <td>40 Gold</td>
+      </tr>
+      <tr>
+        <td>Purple</td>
+        <td>Free</td>
+        <td>40 Purple</td>
+        <td>40 Purple</td>
+      </tr>
+    </table>
     </p>
 
   </div>
@@ -104,36 +138,29 @@
     <h3>Promote</h3>
     <img src="./img/commanders/commander4.jpg" class="game_image" />
     <p>
-      The Promote screen is fairly self explanitory. There are 5 stars with 5 arms each.  Each invention will cost you a certain amount of BP's per arm. Initially the cost is 2 
+      The Promote screen is fairly self explanitory. There are 5 stars with 5 arms each. Each promotion will cost you a
+      certain amount of BP's per arm. Initially the cost is 2
       bp per arm, increasing to 4bp on the 5th arm. For each star it requires these number of BP's
-      <ul>
-        <li>1 Star - 12bp's</li>
-        <li>2 Star - 33bp's</li>
-        <li>3 Star - 68bp's</li>
-        <li>4 Star - 153bp's</li>
-        <li>5 Star - 300bp's</li>
-      </ul>
-      The line driectly underneith shows what attribute will be increased with the next arm.  When getting 5 arms (a star) the ships Mutaplasmid will be increased.
-      The Mutaplasmid confers either negative effects on traits when not reached or increases the effectiveness when reached.  For example ECM jam chance of occuring
-      may drop by 10% until the Mutaplasmid for that trait is reached or a weapon may increase damage once the Mutaplasmid is reached. First star applies to first 
-      trait, second star to second trait ... fifth star generally increases all basic attributes
+    <ul>
+      <li>1 Star - 12bp's</li>
+      <li>2 Star - 33bp's</li>
+      <li>3 Star - 68bp's</li>
+      <li>4 Star - 153bp's</li>
+      <li>5 Star - 300bp's</li>
+    </ul>
+    The line driectly underneith shows what attribute will be increased with the next arm. When getting 5 arms (a star)
+    the commander will unlock an extra talent or gain more talent points.
     </p>
-    <p>The Legendary Data Chip can also be swapped for a ship blueprint by hitting the plus button. These chips come from events, corp rewards or pirates.</p>
+    <p>The Legendary Data Chip can also be swapped for a commander blueprints by hitting the plus button. These chips come
+      from events, corp rewards or pirates.</p>
     <img src="./img/commanders/commander5.jpg" class="game_image" />
 
   </div>
 
-  <div id="Traits" class="tabcontent">
-    <h3>Traits</h3>
-    <img src="./img/commanders/commander2.jpg" class="game_image" />
-    <p>
-      Recomended Commanders are the commanders that will gain a bonus if set as primary and secondary commanders. Sometimes there may be three or four commanders available 
-      but in all cases both primary and secondary commander must be from this list to get the bonus. The bonus is often +10 Data Rate or +10% damge.
-    </p>
-    <p>
-      In this authors honest opinion in most cases this bonus doesn't outweigh the weaknesses of the recomended commanders. Far better to choose better commanders with a matching
-      faction and ignore the bonus. Often the recomended commanders also don't have matching formation bonus as well. CCP should definately tidy this up and grant better bonuses
-    </p>
+  <div id="Talents" class="tabcontent">
+    <h3>Talents</h3>
+    <h3>Under Construction</h3>
+    <img src="./img/under_construction.png" style="width:512px;height:512px;"/>
   </div>
 </body>
 
