@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="content_style.css">
+</head>
+<script type="text/javascript" src="content.js"></script>
+
+<body onload="openTab(event, 'relocation')">
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Under_Construction')">Basics</button>
+    <button class="tablinks" onclick="openTab(event, 'Under_Construction')">Research</button>
+    <button class="tablinks" onclick="openTab(event, 'relocation')">Relocation</button>
+    <button class="tablinks" onclick="openTab(event, 'Under_Construction')">Market</button>
+    <button class="tablinks" onclick="openTab(event, 'Under_Construction')">Miscelanious</button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="relocation" class="tabcontent">
+    <h3>Relocation</h3>
+    <img src="./img/relocation.jpg" style="width:200px;height:200px;float:left;" />
+    The first thing to do when relocating is to capture 7 grids in a circle, the same shape as your base in a spot on a
+    map that looks peacefull and quiet.
+    Then click the center tile -> assemble and chose the relocate icon. Relocation either uses a station anchoring
+    device, you gen one for free as a starter mission
+    or 900 nova credits from the interbus market. Or 1000 nova credits if you relocate directly without a station
+    anchoring device.<br>
+    Note: All ships must be back at base to relocate. Currently not certain if you can relocate while captured or with
+    shields on. I believe so but I can't confirm.
+  </div>
+  <div id="Under_Construction" class="tabcontent" style="text-align:center;">
+    <h3>Under Construction</h3>
+    <img src="./img/under_construction.png" style="width:512px;height:512px;" />
+
+  </div>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 <head> 
    <meta charset="UTF-8">
-   <title>CodePen - Modern Sidebar Menu</title>
+   <title>Eve Galaxy Conquest - User Guide</title>
    <link rel="stylesheet" href="style.css">
 </head>
 <script type="text/javascript" src="./eve.js"></script>
@@ -16,27 +16,51 @@
       <div id="leftColumn">
          <aside>
             <p> Menu </p>
-            <a href="javascript:void(0);" onclick="changeContent('./content_template.html')">
+            <a href="javascript:void(0);" onclick="changeContent('./home.html')">
+               <i class="fa fa-user-o" aria-hidden="true"></i>
+               Home
+            </a>
+            <a href="javascript:void(0);" onclick="changeContent('./walkthrough.html')">
                <i class="fa fa-user-o" aria-hidden="true"></i>
                Walk Through
+            </a>
+            <a href="javascript:void(0);" onclick="changeContent('./hq.html')">
+               <i class="fa fa-laptop" aria-hidden="true"></i>
+               HQ
+            </a>
+            <a href="javascript:void(0);" onclick="changeContent('./content_template.html')" style="color:red">
+               <i class="fa fa-laptop" aria-hidden="true"></i>
+               Resources
+            </a>
+            <a href="javascript:void(0);" onclick="changeContent('./content_template.html')" style="color:red">
+               <i class="fa fa-laptop" aria-hidden="true"></i>
+               Navigation
+            </a>
+            <a href="javascript:void(0);" onclick="changeContent('./content_template.html')" style="color:red">
+               <i class="fa fa-laptop" aria-hidden="true"></i>
+               Structures
             </a>
             <a href="javascript:void(0);" onclick="changeContent('./ships.html')">
                <i class="fa fa-user-o" aria-hidden="true"></i>
                Ships
             </a>
-            <a href="javascript:void(0);" onclick="changeContent('./content_template.html')">
+            <a href="javascript:void(0);" onclick="changeContent('./commanders.html')">
                <i class="fa fa-laptop" aria-hidden="true"></i>
                Commanders
             </a>
-            <a href="javascript:void(0)" onclick="changeContent('./content_template.html')">
+            <a href="javascript:void(0)" onclick="changeContent('./content_template.html')" style="color:red">
                <i class="fa fa-clone" aria-hidden="true"></i>
                Fleets
             </a>
-            <a href="javascript:void(0)" onclick="changeContent('./content_template.html')">
+            <a href="javascript:void(0)" onclick="changeContent('./content_template.html')" style="color:red">
+               <i class="fa fa-clone" aria-hidden="true"></i>
+               Fleet Building
+            </a>
+            <a href="javascript:void(0)" onclick="changeContent('./content_template.html')" style="color:red">
                <i class="fa fa-star-o" aria-hidden="true"></i>
                Combat
             </a>
-            <a href="javascript:void(0)" onclick="changeContent('./content_template.html')">
+            <a href="javascript:void(0)" onclick="changeContent('./content_template.html')" style="color:red">
                <i class="fa fa-trash-o" aria-hidden="true"></i>
                Tactics
             </a>
@@ -44,11 +68,11 @@
       </div>
       <!--//end #leftColumn//-->
       <div id="centerColumn">
-         <iframe id="iframeContent" src="./ships.html" seamless></iframe>
+         <iframe id="iframeContent" src="./home.html" seamless></iframe>
       </div>
       <!--//end #centerColumn//-->
       <div id="footer">
-         Footer Text
+         Copy Right Luke Davis 2024
       </div>
       <!--//end #footer//-->
    </div>
