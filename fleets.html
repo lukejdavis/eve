@@ -8,132 +8,171 @@
 
 <body onload="openTab(event, 'Basics')">
   <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'Basicsabcd')">Basicsabcd</button>
-    <button class="tablinks" onclick="openTab(event, 'Invent')">Invent</button>
-    <button class="tablinks" onclick="openTab(event, 'Recomended')">Recomended Commanders</button>
+    <button class="tablinks" onclick="openTab(event, 'Basics')">Basics</button>
+    <button class="tablinks" onclick="openTab(event, 'Formations')">Formations</button>
+    <button class="tablinks" onclick="openTab(event, 'Combinations')">Combinations</button>
   </div>
 
   <!-- Tab content -->
-  <div id="Basicsabcd" class="tabcontent">
-    <h3>Basicsss</h3>
-    <img src="./img/ships/ships5.jpg" class="game_image" />
-    <p>1. The top left section details basic summary information on the ship.  The top row is the name of the faction and name of the ship. Faction is important when choosing
-      commanders later on in <a href="javascript:void(0);" onclick="changeContentParent('./content_template.html')">Fleet</a> construction. The second row shows the formations
-      which this ship will give bonus's too and ship size. Ship size changes number of ships per squad (Frigate=5, Destroyer=4, Cruiser=3, Battle Cruiser=2, Battleship=1). 
-      The third line shows ship firepower which impacts the fleet power. This is a summation of HP/Firepower/Traits. As one increases this value increases. Lastly the icons 
-      here can be clicked and indicate what use the ship can be used for. Options include uses such as Offence, Support, Drones and ECM. Since Eve GC doesn't yet have 
-      multi-fleet attack options hopefully this will have greater usefullness in future updates.
+  <div id="Basics" class="tabcontent">
+    <h3>Basics</h3>
+    <img src="./img/ships/fleets1.jpg" class="game_image" />
+    <p>1. The top left section details fleet power, move speed and seige damage. Fleet power looks to be a combination of ship firepower, squad capacity, ship trait
+      levels + Mutaplasmid (from invention star levels) and commander talent levels. A fleet with a 3 star ships and commanders with maxed talents/traits you can expect
+      to level at around 2.6m. 0 star ship and commanders maxes at about 2.3m. Move speed defaults at 50 for seige formation, 100 for other formations. There is a research
+      bonus that adds 50 movement for assault formation when maxed and 25 movement to seige formation when maxed. Seige damage starts at 250 for seige formation and 125dmg for 
+      all other formations. Research again can increase this amount, but generally not by a lot.
     </p>
 
-    <p>2. This shows the current rank of the ship. This can be increased using the <a href="javascript:void(0);" onclick="openTab(event, 'Invent')">Invent button</a>
+    <p>2. This shows the current bonuses that apply to the fleet. Formation bonus is based on the the ship and commander bonus's to the selected formation. If only one ship/commander
+      has the bonus (icon on the ship/commander portrait) then the bonus will be 5%. If all three have that formation the bonus will be 15%. Faction bonus is dependant on ship faction.
+      If both ship and both commanders all belong to the same faction the faction bonus is given. Depending on research a maximum of 10% bonus is given.  Recommended commander bonus
+      is given if both commanders used appear in the ships recommended commander list.
     </p>
 
-    <p>3. Here you can find the basic attributes of the ships. Of note, make sure when comparing to compare to equivilent ship size. I.e don't compare a firgate HP to a Cruisers HP.
+    <p>3. Formations: See tab <a href="javascript:void(0);" onclick="openTab(event, 'Formations')">Formations</a></p>
+
+    <p>4. Here you can swap out ships and commanders. See the <a href="javascript:void(0);" onclick="openTab(event, 'Combinations')">Combinations</a> tab for more details.
+    </p>
+
+    <p>5. Squad Capacity is determined by a number of items. The ship has a basic squad capacity determined by the Control Tower research and the number of commanders. If the Control
+      Tower is researched to 5000 squads a fleet will get 5000 squads per commander, or 10,000 squads for two commanders. Each commander also comes with 100 squads per level up
+      to a maximum if 5000 squads at level 50. Commanders and ships will also get bonus squads at certain promotion levels. Total squad capacity of un-promoted ships and commanders
+      is 30,000 squads. This is why Control Tower research is essential in the early game. It greatly increases the effectiveness of your fleets.
+    </p>
+  </div>
+
+  <div id="Formations" class="tabcontent">
+    <h3>Formations</h3>
+    <img src="./img/ships/fleets2.jpg" class="game_image" />
+    <p>
+      Formations and formation bonus play an important role in PVP.  Not so much in PVE as the fleet formations on RSS are usually random, so for PVE play to your fleets strength.
+      For PVP those who want to get around the map quickly use Assault formation. For those defending structures from enemy combatants use intercept to counter assault formation.
+      Lastly for weaker fleets sieging a citadel or gate use the seige formation. Note that when the ship and two commanders have matching formation bonus a yellow thumbs icon
+      will show.<br><br> <span style="color:greenyellow"><b>Note:</b>Formations can only be changed at your base HQ, they can not be
+      changed when transferring to stations or outposts.</span>
       <table>
         <tr>
-          <th>Attribute</th>
+          <th>Formation</th>
           <th>Description</th>
+          <th>Research Bonus</th>
+          <th>Beats formation</th>
         </tr>
         <tr>
-          <td>Ships per squad</td>
-          <td>Determines the number of ships in each squad</td>
+          <td>Assault</td>
+          <td>Primarily used to get quickly to the frontline. The 150 move points means you will get to the front line 33% faster than the other formations</td>
+          <td>+50 movement points</td>
+          <td>Encirclement, Seige</td>
         </tr>
         <tr>
-          <td>HP</td>
-          <td>Determines the amount of damge that a ship can withstand</td>
+          <td>Encirclement</td>
+          <td>Does increased damage, especially to the Phalanx formation</td>
+          <td>+10% damage bonus</td>
+          <td>Phalanx, Seige</td>
         </tr>
         <tr>
-          <td>Firepower</td>
-          <td>Determines the amount of damge that a ship causes</td>
+          <td>Phalanx</td>
+          <td>Receives 10% less damage</td>
+          <td>+10% damage reduction bonus</td>
+          <td>Intercept, Seige</td>
         </tr>
         <tr>
-          <td>Bandwidth (Aka Data Rate)</td>
-          <td>Determines the order a ship will fire, the higher the better. See <a href="javascript:void(0);" onclick="changeContentParent('./content_template.html')">Fleets</a><br>
-            <span style="color:greenyellow"><b>Note:</b> At present Data Rate is supreme. If you fire first you kill first which means the enemy has less ships to fire back at you.
-              This also includes getting off effects such as ECM Jam (Prevents other player from firing) or Force Shield (reduces incomming damage). The author highly recomends keeping
-              this in mind when choosing ships. The big issue with ships like the Omen and Oracle is they are the last to fire and their weapon takes two turns to fire. This means
-              you can have half your fleet destroyed before even firing a shot.
-            </span>
-          </td>
+          <td>Intercept</td>
+          <td>Receives 10% reduction to enemy data rate, Best used in defending structure from assault PVPers</td>
+          <td>-10% to enemy data rate</td>
+          <td>Assault, Seige</td>
         </tr>
         <tr>
-          <td>Energy</td>
-          <td>Not Known</td>
+          <td>Seige</td>
+          <td>Double damage to seige structures. Movement speed is 50 (half the speed of the other formations.)</td>
+          <td>+25 extra damage to seige structure</td>
+          <td></td>
         </tr>
-        <tr>
-          <td>Armor</td>
-          <td>Is esntially the resistance of the ship to dmage. I have not yet confirmed this but I believe each point of armor is 1% resistance. So an armor of 10 will reduce 
-            incomming damage by 10%</td>
-        </tr>
-      </table>
-    </p>
 
-    <p>4. Ship Traits.  These determine what type of ship module will be used. They roughly fall into four categories. Weapon, Repair, Distruptor or Support. Weapons generally go
-      boom boom but may include things like drones which act a little like a 2nd ship. Repair will repair damaged, but not destroyed, ships during battle. Disrupters are things 
-      like ECM jammers or neural shutdowns, these will cause a ship or commander to fail to use their traits and abilities. Support includes things like increased firepower, armor or quick response. 
-      <br><br>
-      Ship traits cost both cards and isk to enable and raise their level. Isk increase up to $250,000 at level 15. For the card requirements:
-      <table>
-        <tr>
-          <th>Tier</th>
-          <th>1st Trait</th>
-          <th>2nd Trait</th>
-          <th>3rd Trait</th>
-          <th>4th Trait</th>
-        </tr>
-        <tr>
-          <td>Gold</td>
-          <td>Free</td>
-          <td>40 Purple</td>
-          <td>40 Gold</td>
-          <td>40 Gold</td>
-        </tr>
-        <tr>
-          <td>Purple</td>
-          <td>Free</td>
-          <td>40 Purple</td>
-          <td>80 Purple</td>
-          <td>N/A</td>
-        </tr>
       </table>
-    </p>
 
+    </p>
   </div>
 
-  <div id="Invent" class="tabcontent">
-    <h3>Invent</h3>
-    <img src="./img/ships/ships2.jpg" class="game_image" />
+  <div id="Combinations" class="tabcontent">
+    <h3>Combinations</h3>
     <p>
-      The Invent screen is fairly self explanitory. There are 5 stars with 5 arms each.  Each invention will cost you a certain amount of BP's per arm. Initially the cost is 2 
-      bp per arm, increasing to 4bp on the 5th arm. For each star it requires these number of BP's
-      <ul>
-        <li>1 Star - 12bp's</li>
-        <li>2 Star - 33bp's</li>
-        <li>3 Star - 68bp's</li>
-        <li>4 Star - 153bp's</li>
-        <li>5 Star - 300bp's</li>
-      </ul>
-      The line driectly underneith shows what attribute will be increased with the next arm.  When getting 5 arms (a star) the ships Mutaplasmid will be increased.
-      The Mutaplasmid confers either negative effects on traits when not reached or increases the effectiveness when reached.  For example ECM jam chance of occuring
-      may drop by 10% until the Mutaplasmid for that trait is reached or a weapon may increase damage once the Mutaplasmid is reached. First star applies to first 
-      trait, second star to second trait ... fifth star generally increases all basic attributes
+      One of the most common questions I get is which commanders to use with which fleets.  There is no easy answer to this. We have a list of fleets that seem to work under
+      <a href="javascript:void(0);" onclick="changeContentParent('./fleet_building.html')">Fleet Building</a> that should help. In general I try and match commander abilities
+      that compliment each other. Normally I will try and get one repairer with a DPS. In the future for PVP I will likely try and pair a damage dealer with an ECM/Force Shield
+      commander but for the moment the tanks (repairers like Santimona) are just OP in this game.
     </p>
-    <p>The Legendary Data Chip can also be swapped for a ship blueprint by hitting the plus button. These chips come from events, corp rewards or pirates.</p>
-    <img src="./img/ships/ships1.jpg" class="game_image" />
 
-  </div>
+    <table>
+      <tr>
+        <th>Commander</th>
+        <th>Pairs well with</th>
+        <th>Repair</th>
+        <th>Damage</th>
+        <th>Force shield</th>
+        <th>ECM</th>
+        <th>Neural Shutdown<br>Reactor Failure<br>EM Storm<br>Short Circuit</th>
+        <th>Burn</th>
+        <th>Support (Stat boost)</th>
+      </tr>
+      <tr>
+        <td style="color:green"><b>Gold</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>Ameline</td><td>Karin</td><td>Yes (2 *)</td><td>Yes</td><td>Yes (3 *)</td><td></td><td>Yes</td><td></td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Cerb</td><td>Hayden</td><td></td><td>Yes</td><td></td><td></td><td></td><td>Yes</td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Faus</td><td></td><td>Yes (Turn 5)</td><td>Yes</td><td>Yes (3 *)</td><td>Yes</td><td></td><td></td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Flaherty</td><td></td><td>Yes</td><td>Yes</td><td></td><td></td><td></td><td></td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Jonas</td><td></td><td>Yes (3 *)</td><td></td><td>Yes (3 *)</td><td></td><td></td><td></td><td>Yes (Strong support)</td>
+      </tr>
+      <tr>
+        <td>Karin</td><td>Ameline</td><td>Yes (2 *)</td><td>Yes</td><td></td><td></td><td>Yes</td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>Karth</td><td>Vlad</td><td></td><td>Yes</td><td></td><td></td><td></td><td></td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Kezti</td><td>Pamik</td><td></td><td>Yes</td><td></td><td></td><td>yes</td><td></td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Mila</td><td></td><td>Yes</td><td>Yes (5 *)</td><td></td><td></td><td></td><td></td><td>Yes (Strong support)</td>
+      </tr>
+      <tr>
+        <td>Pamik</td><td>Kezti</td><td>Yes</td><td>Yes (3 *)</td><td></td><td></td><td></td><td></td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Santimona</td><td>Brokera, Jonas</td><td>Yes</td><td></td><td></td><td></td><td></td><td></td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Soura</td><td></td><td></td><td>Yes</td><td>Ion Shield (3 *)</td><td></td><td></td><td></td><td>Yes (Strong support)</td>
+      </tr>
+      <tr>
+        <td>Vlad</td><td>Karth</td><td></td><td>Yes</td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>Viola</td><td></td><td>Yes</td><td>Yes</td><td></td><td></td><td>Yes</td><td></td><td></td>
+      </tr>
 
-  <div id="Recomended" class="tabcontent">
-    <h3>Recomended Commanders</h3>
-    <img src="./img/ships/ships4.jpg" class="game_image" />
-    <p>
-      Recomended Commanders are the commanders that will gain a bonus if set as primary and secondary commanders. Sometimes there may be three or four commanders available 
-      but in all cases both primary and secondary commander must be from this list to get the bonus. The bonus is often +10 Data Rate or +10% damge.
-    </p>
-    <p>
-      In this authors honest opinion in most cases this bonus doesn't outweigh the weaknesses of the recomended commanders. Far better to choose better commanders with a matching
-      faction and ignore the bonus. Often the recomended commanders also don't have matching formation bonus as well. CCP should definately tidy this up and grant better bonuses
-    </p>
+      <tr>
+        <td style="color:green"><b>Purple</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>Brokera</td><td>Santimona</td><td></td><td>Yes</td><td></td><td></td><td>Yes</td><td></td><td>Yes</td>
+      </tr>
+      <tr>
+        <td>Hayden</td><td>Cerb</td><td></td><td></td><td>Yes</td><td></td><td></td><td></td><td>Yes (Strong support)</td>
+      </tr>
+    </table>
+
+    
   </div>
 </body>
 
