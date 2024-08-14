@@ -1,5 +1,5 @@
 function changeContentParent(srcDoc) {
-         window.parent.document.getElementById("iframeContent").setAttribute("src",srcDoc);
+         window.parent.document.getElementById("iframeContent").setAttribute("src",srcDoc+"?id="+Math.floor(Math.random() * 10000));
 }                          
 
 function openTab(evt, tabName) {
